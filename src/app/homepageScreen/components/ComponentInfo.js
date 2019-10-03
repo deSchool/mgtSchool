@@ -22,7 +22,7 @@ export default class COmponentInfo extends Component {
     return (
       <View style={styles.container}>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-          <Image
+              <Image
             resizeMode="contain"
             style={styles.banner}
             source={{
