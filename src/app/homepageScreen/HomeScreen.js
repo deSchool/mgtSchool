@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   ScrollView
 } from 'react-native'
-
+import LinearGradient from 'react-native-linear-gradient'
 import { Container } from 'native-base'
 import HeaderHome from '../../commons/HeaderHome'
 import {
@@ -26,7 +26,7 @@ export default class HomeScreen extends Component {
         <HeaderHome>Logo Here</HeaderHome>
         <ScrollView>
           <View style={styles.container}>
-            <View style={styles.header}></View>
+            <LinearGradient colors={['#4c669f', '#64D5E6', '#47E5E7']} style={styles.header}></LinearGradient>
             <View style={styles.bodyCard}>
               <View
                 style={{
