@@ -8,6 +8,7 @@ import HomeScreen from './app/homepageScreen/HomeScreen';
 import ClassScreen from './app/classScreen/ClassScreen';
 import PostScreen from './app/postScreen/PostScreen';
 import AccountScreen from './app/accountScreen/AccountScreen';
+import LoginScreen from './app/loginScreen/LoginScreen';
 console.disableYellowBox = true;
 
 class SettingsScreen extends React.Component {
@@ -53,6 +54,12 @@ const SettingsStack = createStackNavigator({
   Settings: {screen: SettingsScreen},
   Details: {screen: DetailsScreen},
   Class: {screen: ClassScreen},
+  Login: {
+    screen: LoginScreen,
+    navigationOptions: {
+      header: null,
+    },
+  },
 });
 
 export default createAppContainer(

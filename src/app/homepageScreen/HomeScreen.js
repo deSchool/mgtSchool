@@ -31,17 +31,20 @@ export default class HomeScreen extends Component {
               style={styles.header}></LinearGradient>
             <View style={styles.bodyCard}>
               <View style={styles.flexHeader}>
-                <View style={{flexDirection: 'column'}}>
-                  <Icon name={'menu'} size={60} color={'#00BFFF'} />
-                  <Text
-                    style={{
-                      textAlign: 'center',
-                      marginTop: responsiveHeight(-2),
-                      fontWeight: '600',
-                    }}>
-                    Helo
-                  </Text>
-                </View>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('Login')}>
+                  <View style={{flexDirection: 'column'}}>
+                    <Icon name={'menu'} size={60} color={'#00BFFF'} />
+                    <Text
+                      style={{
+                        textAlign: 'center',
+                        marginTop: responsiveHeight(-2),
+                        fontWeight: '600',
+                      }}>
+                      Helo
+                    </Text>
+                  </View>
+                </TouchableOpacity>
                 <View style={{flexDirection: 'column'}}>
                   <Icon name={'menu'} size={60} color={'#00BFFF'} />
                   <Text
