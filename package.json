@@ -10,6 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@eva-design/eva": "^1.2.0",
     "axios": "^0.19.0",
     "native-base": "^2.13.8",
     "react": "16.9.0",
@@ -24,6 +25,7 @@
     "react-native-responsive-dimensions": "^2.0.1",
     "react-native-responsive-layout": "^1.2.0",
     "react-native-screens": "^1.0.0-alpha.23",
+    "react-native-ui-kitten": "^4.2.0",
     "react-native-vector-icons": "^6.6.0",
     "react-navigation": "^4.0.10",
     "react-navigation-custom-bottom-tab-component": "^1.1.1",

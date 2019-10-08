@@ -39,18 +39,13 @@ class DetailsScreen extends React.Component {
   }
 }
 
-const HomeStack = createStackNavigator({
+const SettingsStack = createStackNavigator({
   Home: {
     screen: HomeScreen,
     navigationOptions: {
       header: null,
     },
   },
-  Details: {screen: DetailsScreen},
-  Class: {screen: ClassScreen},
-});
-
-const SettingsStack = createStackNavigator({
   Settings: {screen: SettingsScreen},
   Details: {screen: DetailsScreen},
   Class: {screen: ClassScreen},
@@ -65,7 +60,7 @@ const SettingsStack = createStackNavigator({
 export default createAppContainer(
   createBottomTabNavigator(
     {
-      Home: {screen: HomeStack},
+      Home: {screen: HomeScreen},
       Post: {screen: PostScreen},
       Class: {screen: ClassScreen},
       Settings: {screen: SettingsStack},
