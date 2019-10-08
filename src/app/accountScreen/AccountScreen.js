@@ -33,7 +33,8 @@ export default class AccountScreen extends Component {
             <Title style={styles.titleHeader}>Profile</Title>
           </Body>
           <Right style={{flex: 1}}>
-            <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate('EditAccount')}>
               <Icon name="pencil" size={25} style={{color: '#fff'}} />
             </TouchableOpacity>
           </Right>

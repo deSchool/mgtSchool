@@ -8,6 +8,7 @@ import {
   Image,
   Text,
   StatusBar,
+  TouchableOpacity,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {
@@ -65,11 +66,15 @@ export default class LoginScreen extends Component<{}> {
             </Text>
             <Text style={styles.textHelp2}> pusat bantuan.</Text>
           </View>
-          <LinearGradient
-            colors={['#50D79B', '#53D995', '#50D79B']}
-            style={styles.viewButton}>
-            <Text style={styles.textLogin}>Login</Text>
-          </LinearGradient>
+          <TouchableOpacity
+            activeOpacity={0.9}
+            onPress={() => this.props.navigation.navigate('Home')}>
+            <LinearGradient
+              colors={['#50D79B', '#53D995', '#50D79B']}
+              style={styles.viewButton}>
+              <Text style={styles.textLogin}>Login</Text>
+            </LinearGradient>
+          </TouchableOpacity>
         </ScrollView>
       </LinearGradient>
     );
