@@ -24,7 +24,7 @@ const MainApp = createBottomTabNavigator(
         if (routeName === 'Home') {
           iconName = `home${focused ? '' : '-outline'}`;
         } else if (routeName === 'Event') {
-          iconName = `settings${focused ? '' : '-outline'}`;
+          iconName = `map-clock${focused ? '' : '-outline'}`;
         } else if (routeName === 'Class') {
           iconName = `book${focused ? '' : '-outline'}`;
         } else if (routeName === 'Post') {

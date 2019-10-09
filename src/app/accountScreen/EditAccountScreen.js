@@ -67,15 +67,36 @@ export default class EditAccountScreen extends Component {
             </LinearGradient>
             <View style={styles.profileDetail}>
               <View style={styles.detailContent}>
-                <Text style={styles.title}>Post</Text>
+                <View style={styles.iconText}>
+                  <Icon
+                    name="bell-ring"
+                    size={responsiveFontSize(2)}
+                    style={{color: '#00CED1', marginTop: responsiveHeight(0.2)}}
+                  />
+                  <Text style={styles.title}>Post</Text>
+                </View>
                 <Text style={styles.count}>20</Text>
               </View>
               <View style={styles.detailContent}>
-                <Text style={styles.title}>Friends</Text>
+                <View style={styles.iconText}>
+                  <Icon
+                    name="account-supervisor"
+                    size={responsiveFontSize(2.66)}
+                    style={{color: '#00CED1'}}
+                  />
+                  <Text style={styles.title}>Friends</Text>
+                </View>
                 <Text style={styles.count}>200</Text>
               </View>
               <View style={styles.detailContent}>
-                <Text style={styles.title}>Points</Text>
+                <View style={styles.iconText}>
+                  <Icon
+                    name="star"
+                    size={responsiveFontSize(2)}
+                    style={{color: '#00CED1', marginTop: responsiveHeight(0.2)}}
+                  />
+                  <Text style={styles.title}>Points</Text>
+                </View>
                 <Text style={styles.count}>200</Text>
               </View>
             </View>
@@ -84,77 +105,35 @@ export default class EditAccountScreen extends Component {
                 <Text style={styles.profileText}>Profile Siswa</Text>
               </View>
               <View style={styles.profileFlex}>
-                <Form>
-                  <Text
-                    style={{
-                      fontSize: responsiveFontSize(1.2),
-                    }}>
-                    Nama
-                  </Text>
-                  <Input
-                    style={{
-                      fontSize: responsiveFontSize(1.8),
-                    }}
-                  />
-                  <Divider style={styles.divider} />
-                </Form>
+                <Text style={styles.textStack}>Nama</Text>
+                <Input style={styles.editStack} />
+                <Divider style={styles.divider} />
               </View>
               <View style={styles.profileFlex}>
-                <Icon
-                  name="account-group"
-                  size={responsiveFontSize(3.8)}
-                  style={styles.iconProfile}
-                />
-                <Text style={styles.profileData}>Kelas </Text>
-                <Text style={styles.profileDataBold}>XI IPA 2</Text>
+                <Text style={styles.textStack}>Kelas</Text>
+                <Input style={styles.editStack} />
+                <Divider style={styles.divider} />
               </View>
-              <Divider style={styles.divider} />
               <View style={styles.profileFlex}>
-                <Icon
-                  name="account-group"
-                  size={responsiveFontSize(3.8)}
-                  style={styles.iconProfile}
-                />
-                <Text style={styles.profileData}>TTL </Text>
-                <Text style={styles.profileDataBold}>
-                  Jakarta, 02 Februari 2002{' '}
-                </Text>
+                <Text style={styles.textStack}>TTL</Text>
+                <Input style={styles.editStack} />
+                <Divider style={styles.divider} />
               </View>
-              <Divider style={styles.divider} />
               <View style={styles.profileFlex}>
-                <Icon
-                  name="counter"
-                  size={responsiveFontSize(3.8)}
-                  style={styles.iconProfile}
-                />
-                <Text style={styles.profileData}>Nomor Induk </Text>
-                <Text style={styles.profileDataBold}>3039303930393030</Text>
+                <Text style={styles.textStack}>Nomor Induk</Text>
+                <Input style={styles.editStack} />
+                <Divider style={styles.divider} />
               </View>
-              <Divider style={styles.divider} />
               <View style={styles.profileFlex}>
-                <Icon
-                  name="map-marker"
-                  size={responsiveFontSize(3.8)}
-                  style={styles.iconProfile}
-                />
-                <Text style={styles.profileData}>Alamat </Text>
-                <Text style={styles.profileDataBold}>
-                  Sunter Agung Papanggo, Rt 02 Rw 07, jakarta,
-                </Text>
+                <Text style={styles.textStack}>Alamat</Text>
+                <Input style={styles.editStack} />
+                <Divider style={styles.divider} />
               </View>
-              <Divider style={styles.divider} />
               <View style={styles.profileFlex}>
-                <Icon
-                  name="book"
-                  size={responsiveFontSize(3.8)}
-                  style={styles.iconProfile}
-                />
-                <Text style={styles.profileData}>Mapel Favorit</Text>
-                <Text style={styles.profileDataBold}>
-                  IPA, IPS, Bahasa Inggris
-                </Text>
+                <Text style={styles.textStack}>Mapel Favorit</Text>
+                <Input style={styles.editStack} />
+                <Divider style={styles.divider} />
               </View>
-              <View style={{marginBottom: responsiveHeight(2.33)}} />
             </View>
           </View>
         </ScrollView>
@@ -182,6 +161,9 @@ const styles = StyleSheet.create({
   headerContent: {
     padding: 30,
     alignItems: 'center',
+  },
+  iconText: {
+    flexDirection: 'row',
   },
   avatar: {
     width: 130,
@@ -215,7 +197,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontSize: 20,
+    fontSize: responsiveFontSize(2),
     color: '#00CED1',
   },
   count: {
@@ -264,31 +246,12 @@ const styles = StyleSheet.create({
   },
   profileFlex: {
     flex: 1,
-  },
-  iconProfile: {
-    color: '#64D5E6',
-    marginTop: responsiveHeight(0.5),
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 8,
-    },
-    shadowOpacity: 0.46,
-    shadowRadius: 11.14,
-
-    elevation: 17,
+    marginLeft: responsiveWidth(5.33),
   },
   profileData: {
     fontSize: responsiveFontSize(1.8),
     marginTop: responsiveHeight(2),
-    marginLeft: responsiveWidth(2),
-    flex: 1,
-  },
-  profileDataBold: {
-    fontSize: responsiveFontSize(1.8),
-    marginTop: responsiveHeight(2),
-    marginLeft: responsiveWidth(2),
-    fontWeight: 'bold',
+    marginLeft: responsiveWidth(5.33),
     flex: 1,
   },
   divider: {
@@ -296,6 +259,7 @@ const styles = StyleSheet.create({
     width: responsiveWidth(98.5),
     alignSelf: 'center',
     marginTop: responsiveHeight(-1.6),
+    marginLeft: responsiveWidth(5.33),
   },
 
   editInput: {
@@ -304,5 +268,10 @@ const styles = StyleSheet.create({
     color: 'red',
     marginLeft: responsiveWidth(1),
     marginRight: responsiveWidth(9),
+  },
+  textStack: {
+    fontSize: responsiveFontSize(1.2),
+    marginTop: responsiveHeight(2.66),
+    marginLeft: responsiveWidth(1.66),
   },
 });
