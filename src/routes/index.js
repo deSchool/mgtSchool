@@ -10,11 +10,17 @@ import LoginScreen from '../app/loginScreen/LoginScreen';
 import EventScreen from '../app/eventScreen/EventScreen';
 import MainApp from '../app/homepageScreen/MainApp';
 import EditAccountScreen from '../app/accountScreen/EditAccountScreen';
-
+import Absen from '../app/absen/Absen';
 const RootStack = createStackNavigator(
   {
     Home: {
       screen: MainApp,
+      navigationOptions: {
+        header: null,
+      },
+    },
+    Absen: {
+      screen: Absen,
       navigationOptions: {
         header: null,
       },

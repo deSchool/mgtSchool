@@ -12,6 +12,7 @@ import HeaderHome from '../../commons/HeaderHome';
 import {
   responsiveWidth,
   responsiveHeight,
+  responsiveFontSize,
 } from 'react-native-responsive-dimensions';
 import ComponentBanner from './components/ComponentBanner';
 import ComponentNews from './components/ComponentNews';
@@ -31,40 +32,67 @@ export default class HomeScreen extends Component {
             <View style={styles.bodyCard}>
               <View style={styles.flexHeader}>
                 <TouchableOpacity
-                  onPress={() => this.props.navigation.navigate('Login')}>
-                  <View style={{flexDirection: 'column'}}>
-                    <Icon name={'menu'} size={60} color={'#00BFFF'} />
-                    <Text
-                      style={{
-                        textAlign: 'center',
-                        marginTop: responsiveHeight(-2),
-                        fontWeight: '600',
-                      }}>
-                      Helo
-                    </Text>
+                  onPress={() => this.props.navigation.navigate('Absen')}>
+                  <View style={styles.flexMenu}>
+                    <Icon
+                      name={'clock-outline'}
+                      size={responsiveFontSize(7.33)}
+                      color={'#00BFFF'}
+                      style={styles.iconMenu}
+                    />
+                    <Text style={styles.textMenu}>Absensi</Text>
                   </View>
                 </TouchableOpacity>
-                <View style={{flexDirection: 'column'}}>
-                  <Icon name={'menu'} size={60} color={'#00BFFF'} />
-                  <Text
-                    style={{
-                      textAlign: 'center',
-                      marginTop: responsiveHeight(-2),
-                      fontWeight: '600',
-                    }}>
-                    Helo
-                  </Text>
+                <View style={styles.flexMenu}>
+                  <Icon
+                    name={'menu'}
+                    size={responsiveFontSize(7.33)}
+                    color={'#00BFFF'}
+                    style={styles.iconMenu}
+                  />
+                  <Text style={styles.textMenu}>Rekap</Text>
                 </View>
-                <View style={{flexDirection: 'column'}}>
-                  <Icon name={'menu'} size={60} color={'#00BFFF'} />
-                  <Text
-                    style={{
-                      textAlign: 'center',
-                      marginTop: responsiveHeight(-2),
-                      fontWeight: '600',
-                    }}>
-                    Helo
-                  </Text>
+                <View style={styles.flexMenu}>
+                  <Icon
+                    name={'menu'}
+                    size={responsiveFontSize(7.33)}
+                    color={'#00BFFF'}
+                    style={styles.iconMenu}
+                  />
+                  <Text style={styles.textMenu}>Kalender</Text>
+                </View>
+              </View>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-around',
+                }}>
+                <View style={styles.flexMenu}>
+                  <Icon
+                    name={'menu'}
+                    size={responsiveFontSize(7.33)}
+                    color={'#00BFFF'}
+                    style={styles.iconMenu}
+                  />
+                  <Text style={styles.textMenu}>Acara</Text>
+                </View>
+                <View style={styles.flexMenu}>
+                  <Icon
+                    name={'menu'}
+                    size={responsiveFontSize(7.33)}
+                    color={'#00BFFF'}
+                    style={styles.iconMenu}
+                  />
+                  <Text style={styles.textMenu}>Point</Text>
+                </View>
+                <View style={styles.flexMenu}>
+                  <Icon
+                    name={'menu'}
+                    size={responsiveFontSize(7.33)}
+                    color={'#00BFFF'}
+                    style={styles.iconMenu}
+                  />
+                  <Text style={styles.textMenu}>Exschool</Text>
                 </View>
               </View>
 
@@ -73,71 +101,32 @@ export default class HomeScreen extends Component {
                   flexDirection: 'row',
                   justifyContent: 'space-around',
                 }}>
-                <View style={{flexDirection: 'column'}}>
-                  <Icon name={'menu'} size={60} color={'#00BFFF'} />
-                  <Text
-                    style={{
-                      textAlign: 'center',
-                      marginTop: responsiveHeight(-2),
-                      fontWeight: '600',
-                    }}>
-                    Helo
-                  </Text>
+                <View style={styles.flexMenu}>
+                  <Icon
+                    name={'menu'}
+                    size={responsiveFontSize(7.33)}
+                    color={'#00BFFF'}
+                    style={styles.iconMenu}
+                  />
+                  <Text style={styles.textIcon}>Riwayat</Text>
                 </View>
-                <View style={{flexDirection: 'column'}}>
-                  <Icon name={'menu'} size={60} color={'#00BFFF'} />
-                  <Text
-                    style={{
-                      textAlign: 'center',
-                      marginTop: responsiveHeight(-2),
-                      fontWeight: '600',
-                    }}>
-                    Helo
-                  </Text>
+                <View style={styles.flexMenu}>
+                  <Icon
+                    name={'menu'}
+                    size={responsiveFontSize(7.33)}
+                    color={'#00BFFF'}
+                    style={styles.iconMenu}
+                  />
+                  <Text style={styles.textMenu}>Guru</Text>
                 </View>
-                <View style={{flexDirection: 'column'}}>
-                  <Icon name={'menu'} size={60} color={'#00BFFF'} />
-                  <Text
-                    style={{
-                      textAlign: 'center',
-                      marginTop: responsiveHeight(-2),
-                      fontWeight: '600',
-                    }}>
-                    Helo
-                  </Text>
-                </View>
-              </View>
-
-              <View
-                style={{
-                  flexDirection: 'row',
-                  justifyContent: 'space-around',
-                }}>
-                <View style={{flexDirection: 'column'}}>
-                  <Icon name={'menu'} size={60} color={'#00BFFF'} />
-                  <Text style={styles.textIcon}>Helo</Text>
-                </View>
-                <View style={{flexDirection: 'column'}}>
-                  <Icon name={'menu'} size={60} color={'#00BFFF'} />
-                  <Text
-                    style={{
-                      textAlign: 'center',
-                      marginTop: responsiveHeight(-2),
-                      fontWeight: '600',
-                    }}>
-                    Helo
-                  </Text>
-                </View>
-                <View style={{flexDirection: 'column'}}>
-                  <Icon name={'menu'} size={60} color={'#00BFFF'} />
-                  <Text
-                    style={{
-                      textAlign: 'center',
-                      marginTop: responsiveHeight(-2),
-                      fontWeight: '600',
-                    }}>
-                    Helo
-                  </Text>
+                <View style={styles.flexMenu}>
+                  <Icon
+                    name={'menu'}
+                    size={responsiveFontSize(7.33)}
+                    color={'#00BFFF'}
+                    style={styles.iconMenu}
+                  />
+                  <Text style={styles.textMenu}>Berita</Text>
                 </View>
               </View>
             </View>
@@ -181,6 +170,19 @@ const styles = StyleSheet.create({
   flexHeader: {
     flexDirection: 'row',
     justifyContent: 'space-around',
+  },
+  flexMenu: {
+    flexDirection: 'column',
+    width: responsiveWidth(20),
+    alignItems: 'center',
+  },
+  iconMenu: {
+    marginBottom: responsiveHeight(1),
+  },
+  textMenu: {
+    marginTop: responsiveHeight(-1),
+    fontWeight: '600',
+    fontSize: responsiveFontSize(1.6),
   },
   name: {
     fontSize: 22,
