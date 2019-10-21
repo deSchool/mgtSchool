@@ -18,12 +18,13 @@ import {
 } from 'react-native-responsive-dimensions';
 import LinearGradient from 'react-native-linear-gradient';
 import {Divider} from 'react-native-elements';
+import HeaderContent from '../../commons/HeaderContent';
 
 export default class Absen extends Component {
   render() {
     return (
       <Container>
-        <Header style={styles.headerProfile} androidStatusBarColor="#4285F4">
+        {/* <Header style={styles.headerProfile} androidStatusBarColor="#4285F4">
           <Left style={{flex: 1, marginLeft: responsiveWidth(2)}}>
             <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
               <Icon name="arrow-left" size={25} style={{color: '#fff'}} />
@@ -38,7 +39,8 @@ export default class Absen extends Component {
               <Icon name="forum" size={25} style={{color: '#fff'}} />
             </TouchableOpacity>
           </Right>
-        </Header>
+        </Header> */}
+        <HeaderContent>ABSENSI</HeaderContent>
         <ScrollView>
           <View style={styles.container}>
             <LinearGradient
@@ -53,8 +55,74 @@ export default class Absen extends Component {
               <View style={styles.absenArea}>
                 <View style={styles.blockArea}>
                   <Text style={styles.textAbsenArea}> Absen Sekarang</Text>
+                  <View style={styles.columArea}>
+                    <View style={styles.columnSubArea}>
+                      <Text style={styles.textCheck}>Check In</Text>
+                      <Text style={styles.textCheckTime}>11: 11 AM</Text>
+                    </View>
+                    <View style={styles.columnSubArea}>
+                      <Text style={styles.textCheck}>Check Out</Text>
+                      <Text style={styles.textCheckTime}>-</Text>
+                    </View>
+                  </View>
+                  <View>
+                    <View style={styles.areaViewButton}>
+                      <View style={styles.viewButton1}>
+                        <TouchableOpacity
+                          activeOpacity={0.9}
+                          onPress={() =>
+                            this.props.navigation.navigate('Home')
+                          }>
+                          <LinearGradient
+                            colors={['#50D79B', '#53D995', '#50D79B']}
+                            style={styles.viewButtonMedium}>
+                            <Text style={styles.textLogin}>Check In</Text>
+                          </LinearGradient>
+                        </TouchableOpacity>
+                      </View>
+                      <View style={styles.viewButton2}>
+                        <TouchableOpacity
+                          activeOpacity={0.9}
+                          onPress={() =>
+                            this.props.navigation.navigate('Home')
+                          }>
+                          <LinearGradient
+                            colors={['#50D79B', '#53D995', '#50D79B']}
+                            style={styles.viewButtonMedium}>
+                            <Text style={styles.textLogin}>Check Out</Text>
+                          </LinearGradient>
+                        </TouchableOpacity>
+                      </View>
+                    </View>
+                  </View>
                 </View>
               </View>
+            </View>
+            <View>
+              <View style={styles.viewContent}>
+                <View style={styles.viewTextContent}>
+                  <Text style={styles.textTitle}>Jadwal Hari Ini</Text>
+                  <Text style={styles.textActivity}>Lihat Aktivitas</Text>
+                </View>
+                <View style={styles.viewDataContent}>
+                  <Icon
+                    name="clock-outline"
+                    size={responsiveFontSize(2)}
+                    style={{color: '#000000', marginTop: responsiveHeight(0.5)}}
+                  />
+                  <Text style={styles.textSchedule}>11: 11 AM - 08:11 PM</Text>
+                  <Icon
+                    name="arrow-expand-right"
+                    size={responsiveFontSize(2)}
+                    style={{
+                      color: '#000000',
+                      marginLeft: responsiveWidth(40),
+                      marginTop: responsiveHeight(0.5),
+                    }}
+                  />
+                </View>
+              </View>
+              <Divider style={styles.divider} />
             </View>
           </View>
         </ScrollView>
@@ -120,20 +188,102 @@ const styles = StyleSheet.create({
   },
   absenArea: {
     width: responsiveWidth(88),
-    height: responsiveHeight(30),
+    height: responsiveHeight(28),
     alignSelf: 'center',
     borderWidth: 2,
     borderColor: '#EEEEEE',
     marginTop: responsiveHeight(2.33),
   },
   blockArea: {
-    width: responsiveWidth(88),
-    height: responsiveHeight(8),
+    width: responsiveWidth(87),
+    height: responsiveHeight(6),
     backgroundColor: '#47E5E7',
     alignItems: 'center',
+    alignSelf: 'center',
   },
   textAbsenArea: {
-    fontSize: responsiveFontSize(2),
+    fontSize: responsiveFontSize(3),
     color: '#FFFFFF',
+  },
+  columArea: {
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    marginTop: responsiveHeight(2),
+  },
+  columnSubArea: {
+    alignItems: 'center',
+  },
+  textCheck: {
+    fontSize: responsiveFontSize(1.6),
+    color: 'grey',
+  },
+  textCheckTime: {
+    fontSize: responsiveFontSize(1.8),
+    color: 'black',
+    marginTop: responsiveHeight(1.6),
+  },
+  viewButtonMedium: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: responsiveHeight(6.33),
+    width: responsiveWidth(25),
+    marginTop: responsiveHeight(3.66),
+    bottom: 0,
+    borderRadius: 20,
+    margin: 10,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+
+    elevation: 5,
+  },
+  textLogin: {
+    color: '#fff',
+    fontSize: responsiveFontSize(1.8),
+    fontWeight: 'bold',
+  },
+  areaViewButton: {
+    flexDirection: 'row',
+  },
+  viewButton1: {
+    alignSelf: 'center',
+    marginRight: responsiveWidth(2.2),
+    marginLeft: responsiveWidth(1.2),
+  },
+  viewButton2: {
+    alignSelf: 'center',
+    marginLeft: responsiveWidth(3.2),
+  },
+  viewTextContent: {
+    flexDirection: 'row',
+    marginLeft: responsiveWidth(5.33),
+    marginTop: responsiveHeight(2.66),
+  },
+  textTitle: {
+    fontSize: responsiveFontSize(2),
+    marginLeft: responsiveWidth(1.2),
+  },
+  viewDataContent: {
+    flexDirection: 'row',
+    marginTop: responsiveHeight(2.2),
+    marginLeft: responsiveWidth(5.33),
+  },
+  textSchedule: {
+    marginLeft: responsiveWidth(2.33),
+  },
+  divider: {
+    marginTop: responsiveHeight(2.33),
+    marginLeft: responsiveWidth(5.33),
+  },
+  textActivity: {
+    marginLeft: responsiveWidth(40),
+    fontSize: responsiveFontSize(1.4),
+    color: 'grey',
   },
 });
