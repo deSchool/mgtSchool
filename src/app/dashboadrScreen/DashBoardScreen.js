@@ -219,7 +219,7 @@ export default class DashBoardScreen extends Component {
                       name="clock-outline"
                       size={responsiveFontSize(2)}
                       style={{
-                        color: '#000000',
+                        color: 'black',
                         marginTop: responsiveHeight(0.5),
                       }}
                     />
