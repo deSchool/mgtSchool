@@ -43,15 +43,18 @@ export default class HomeScreen extends Component {
                     <Text style={styles.textMenu}>Absensi</Text>
                   </View>
                 </TouchableOpacity>
-                <View style={styles.flexMenu}>
-                  <Icon
-                    name={'menu'}
-                    size={responsiveFontSize(7.33)}
-                    color={'#00BFFF'}
-                    style={styles.iconMenu}
-                  />
-                  <Text style={styles.textMenu}>Rekap</Text>
-                </View>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('Dashboard')}>
+                  <View style={styles.flexMenu}>
+                    <Icon
+                      name={'face'}
+                      size={responsiveFontSize(7.33)}
+                      color={'#00BFFF'}
+                      style={styles.iconMenu}
+                    />
+                    <Text style={styles.textMenu}>Rekap</Text>
+                  </View>
+                </TouchableOpacity>
                 <View style={styles.flexMenu}>
                   <Icon
                     name={'menu'}

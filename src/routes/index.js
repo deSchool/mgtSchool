@@ -11,6 +11,7 @@ import EventScreen from '../app/eventScreen/EventScreen';
 import MainApp from '../app/homepageScreen/MainApp';
 import EditAccountScreen from '../app/accountScreen/EditAccountScreen';
 import Absen from '../app/absen/Absen';
+import DashBoardScreen from '../app/dashboadrScreen/DashBoardScreen';
 const RootStack = createStackNavigator(
   {
     Home: {
@@ -27,6 +28,12 @@ const RootStack = createStackNavigator(
     },
     EditAccount: {
       screen: EditAccountScreen,
+      navigationOptions: {
+        header: null,
+      },
+    },
+    Dashboard: {
+      screen: DashBoardScreen,
       navigationOptions: {
         header: null,
       },
