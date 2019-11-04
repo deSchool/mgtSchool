@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react'
 import {
   Container,
   Header,
@@ -7,25 +7,22 @@ import {
   CardItem,
   Thumbnail,
   Text,
-  Button,
-  Left,
-  Body,
-  Right,
-} from 'native-base';
-import {View, Image, StyleSheet} from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import HeaderContent from '../../commons/HeaderContent';
+  Left
+} from 'native-base'
+import { View, Image, StyleSheet } from 'react-native'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+import HeaderContent from '../../commons/HeaderContent'
 import {
   responsiveFontSize,
   responsiveWidth,
-  responsiveHeight,
-} from 'react-native-responsive-dimensions';
-import LinearGradient from 'react-native-linear-gradient';
+  responsiveHeight
+} from 'react-native-responsive-dimensions'
+import LinearGradient from 'react-native-linear-gradient'
 
 export default class ClassScreen extends Component {
   constructor(props) {
-    super(props);
-    this.state = {};
+    super(props)
+    this.state = {}
   }
 
   render() {
@@ -132,7 +129,7 @@ export default class ClassScreen extends Component {
           </View>
         </Content>
       </Container>
-    );
+    )
   }
 }
 
@@ -147,29 +144,29 @@ const styles = StyleSheet.create({
     shadowColor: '#64D5E6',
     shadowOffset: {
       width: 0,
-      height: 2,
+      height: 2
     },
     shadowOpacity: 0.23,
     shadowRadius: 2.62,
 
-    elevation: 4,
+    elevation: 4
   },
   viewHi: {
-    flexDirection: 'row',
+    flexDirection: 'row'
   },
   iconView: {
     marginLeft: responsiveWidth(5.33),
-    marginTop: responsiveHeight(2.33),
+    marginTop: responsiveHeight(2.33)
   },
   textTitle: {
     marginTop: responsiveHeight(3.8),
     fontSize: responsiveFontSize(3),
-    color: '#FFFFFF',
+    color: '#FFFFFF'
   },
   viewDivider: {
     backgroundColor: '#FFFFFF',
     width: responsiveWidth(92),
-    height: responsiveHeight(0.5),
+    height: responsiveHeight(0.5)
   },
   viewBottom: {
     borderWidth: 2,
@@ -177,7 +174,7 @@ const styles = StyleSheet.create({
     borderColor: '#FFFFFF',
     borderRadius: 10,
     width: responsiveWidth(80),
-    alignSelf: 'center',
+    alignSelf: 'center'
   },
   textBottom: {
     color: '#FFFFFF',
@@ -185,14 +182,14 @@ const styles = StyleSheet.create({
     fontSize: responsiveFontSize(1.8),
     marginTop: responsiveHeight(1.33),
     marginBottom: responsiveHeight(1.33),
-    justifyContent: 'space-between',
+    justifyContent: 'space-between'
   },
   dataCard: {
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     marginTop: responsiveHeight(3.33),
-    marginBottom: responsiveHeight(2.33),
+    marginBottom: responsiveHeight(2.33)
   },
   itemCard: {
     width: responsiveHeight(25),
@@ -203,12 +200,12 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: 2,
+      height: 2
     },
     shadowOpacity: 0.23,
     shadowRadius: 2.62,
 
-    elevation: 4,
+    elevation: 4
   },
   itemCard2: {
     width: responsiveHeight(25),
@@ -219,27 +216,27 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: 2,
+      height: 2
     },
     shadowOpacity: 0.23,
     shadowRadius: 2.62,
-    elevation: 4,
+    elevation: 4
   },
   itemTextTitle: {
     color: '#64D5E6',
     fontWeight: 'bold',
     fontSize: responsiveFontSize(2),
     marginLeft: responsiveWidth(2.66),
-    marginTop: responsiveHeight(1),
+    marginTop: responsiveHeight(1)
   },
   itemTextSUb: {
     color: '#64D5E6',
     fontSize: responsiveFontSize(1.6),
     marginLeft: responsiveWidth(2.66),
-    marginRight: responsiveWidth(2.6),
+    marginRight: responsiveWidth(2.6)
   },
   iconViewText: {
     marginLeft: responsiveWidth(2.33),
-    marginTop: responsiveHeight(2.33),
-  },
-});
+    marginTop: responsiveHeight(2.33)
+  }
+})

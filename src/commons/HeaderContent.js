@@ -1,43 +1,41 @@
-import React, {Component} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import React, { Component } from 'react'
+import { View, StyleSheet } from 'react-native'
 import {
   Header,
   Left,
   Right,
   Body,
-  Button,
   Title,
-  Icon,
-  Container,
-} from 'native-base';
-import {withNavigation} from 'react-navigation';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+  Icon
+} from 'native-base'
+import { withNavigation } from 'react-navigation'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 import {
   responsiveFontSize,
-  responsiveWidth,
-} from 'react-native-responsive-dimensions';
+  responsiveWidth
+} from 'react-native-responsive-dimensions'
 class HeaderContent extends Component {
   constructor(props) {
-    super(props);
-    this.state = {};
+    super(props)
+    this.state = {}
   }
 
   render() {
     return (
       <View>
         <Header style={styles.headerContent} androidStatusBarColor="#4285F4">
-          <Left style={{flex: 1, marginLeft: responsiveWidth(2)}}>
+          <Left style={{ flex: 1, marginLeft: responsiveWidth(2) }}>
             <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
-              <Icon name="arrow-back" style={{color: '#fff'}} />
+              <Icon name="arrow-back" style={{ color: '#fff' }} />
             </TouchableOpacity>
           </Left>
-          <Body style={{flex: 3, justifyContent: 'center'}}>
+          <Body style={{ flex: 3, justifyContent: 'center' }}>
             <Title style={styles.titleHeader}>{this.props.children}</Title>
           </Body>
-          <Right style={{flex: 1}} />
+          <Right style={{ flex: 1 }} />
         </Header>
       </View>
-    );
+    )
   }
 }
 
@@ -48,11 +46,11 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: 7,
+      height: 7
     },
     shadowOpacity: 0.41,
     shadowRadius: 9.11,
-    elevation: 14,
+    elevation: 14
   },
   titleHeader: {
     color: '#ffffff',
@@ -62,7 +60,7 @@ const styles = StyleSheet.create({
     fontSize: responsiveFontSize(1.8),
     textTransform: 'uppercase',
     fontWeight: 'bold',
-    fontFamily: 'Open Sans',
-  },
-});
-export default withNavigation(HeaderContent);
+    fontFamily: 'Open Sans'
+  }
+})
+export default withNavigation(HeaderContent)

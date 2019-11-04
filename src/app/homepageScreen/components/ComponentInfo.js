@@ -1,12 +1,9 @@
 import React, { Component } from 'react'
 import {
-  Platform,
   StyleSheet,
-  Text,
   View,
   Image,
-  ScrollView,
-  Dimensions
+  ScrollView
 } from 'react-native'
 import {
   responsiveHeight,
@@ -15,14 +12,11 @@ import {
 
 export default class COmponentInfo extends Component {
   render() {
-    let dimensions = Dimensions.get('window')
-    let imageHeight = Math.round((dimensions.width * 9) / 16)
-    let imageWidth = dimensions.width
 
     return (
       <View style={styles.container}>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-              <Image
+          <Image
             resizeMode="contain"
             style={styles.banner}
             source={{

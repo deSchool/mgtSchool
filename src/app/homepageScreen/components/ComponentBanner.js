@@ -1,12 +1,9 @@
 import React, { Component } from 'react'
 import {
-  Platform,
   StyleSheet,
-  Text,
   View,
   Image,
-  ScrollView,
-  Dimensions
+  ScrollView
 } from 'react-native'
 import {
   responsiveHeight,
@@ -15,9 +12,6 @@ import {
 
 export default class ComponentBanner extends Component {
   render() {
-    let dimensions = Dimensions.get('window')
-    let imageHeight = Math.round((dimensions.width * 9) / 16)
-    let imageWidth = dimensions.width
 
     return (
       <View style={styles.container}>
@@ -77,7 +71,7 @@ const styles = StyleSheet.create({
     width: responsiveWidth(80),
     borderRadius: 10,
     marginTop: responsiveHeight(30),
-    marginRight: responsiveWidth(-2.33),
+    marginRight: responsiveWidth(2.33),
     marginBottom: responsiveHeight(2.33)
   }
 })

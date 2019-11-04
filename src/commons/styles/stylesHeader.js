@@ -1,8 +1,7 @@
 import {
-  responsiveFontSize,
-  responsiveWidth,
-} from 'react-native-responsive-dimensions';
-import {StyleSheet} from 'react-native';
+  responsiveFontSize
+} from 'react-native-responsive-dimensions'
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   homeHeader: {
@@ -10,11 +9,11 @@ export const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: 7,
+      height: 7
     },
     shadowOpacity: 0.41,
     shadowRadius: 9.11,
-    elevation: 14,
+    elevation: 14
   },
   titleHeader: {
     color: '#ffffff',
@@ -24,6 +23,6 @@ export const styles = StyleSheet.create({
     fontSize: responsiveFontSize(2.2),
     textTransform: 'uppercase',
     fontWeight: 'bold',
-    fontFamily: 'Open Sans',
-  },
-});
+    fontFamily: 'Open Sans'
+  }
+})

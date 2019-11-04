@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+import React, { Component } from 'react'
+import { View, Text } from 'react-native'
 
 export default class EventScreen extends Component {
   constructor(props) {
-    super(props);
-    this.state = {};
+    super(props)
+    this.state = {}
   }
 
   render() {
@@ -12,6 +12,6 @@ export default class EventScreen extends Component {
       <View>
         <Text> EventScreen </Text>
       </View>
-    );
+    )
   }
 }
